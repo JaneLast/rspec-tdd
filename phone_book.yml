@@ -1,0 +1,23 @@
+:people:
+  - :fname: Jane
+    :surname: Last
+    :dob: 10 May 1991
+    :emails:
+      - jane.kempton@gmail.com
+      - jkempton@testingcircle.com
+    :phones:
+      - 0759 970 9983
+  - :fname: Aaron
+    :surname: Muir
+    :dob: 21 July 1991
+    :emails:
+      - amuir@testingcircle.com
+    :phones:
+      - 0771 234 5678
+  - :fname: Abi
+    :surname: Oloyede
+    :dob: 04 October 1992
+    :emails:
+      - aoloyede@testingcircle.com
+    :phones:
+      - 0771 111 1112

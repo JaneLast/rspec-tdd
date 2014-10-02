@@ -1,4 +1,6 @@
 require 'date'
+require 'yaml'
+require 'pry'
 class Person
   
   attr_accessor :dob, :first_name, :surname, :email, :phone_numbers
@@ -54,4 +56,32 @@ class AddressBook
     return @book
   end
   
+  def yml_read
+    file = File.open('phone_book.yml')
+    data = YAML::load(file)
+    
+    data[:people].each do |yaml_person|
+      #Creates a new person object with the details form the yaml.
+      person = Person.new(yaml_person[:fname], yaml_person[:surname], yaml_person[:dob])
+      
+      # Add any email address
+      yaml_person[:emails].each do |e|
+        person.add_email(e)
+      end
+      
+      # Add any phone numbers
+      yaml_person[:phones].each do |e|
+        person.add_phone(e)
+      end
+      
+      # Save the new person 
+      @book << person
+      end
+  end
+  
+  def data
+    @data
+  end
 end
+
+binding.pry

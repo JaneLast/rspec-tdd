@@ -72,6 +72,12 @@ describe "The Person Class" do
     expect(book.people).to eq([])
   end
   
+  it "should add add yml file into address book" do
+    book = AddressBook.new
+    book.yml_read
+    
+    expect(book.people.length).to eq(book.data[:people].length)
+  end
 end
 
 

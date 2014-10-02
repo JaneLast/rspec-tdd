@@ -1,9 +1,15 @@
-file = File.open('names.txt')
+require 'pry'
+require 'yaml'
 
-file.each do |line|
-  puts line
-end
+file = File.open('phone_book.yml')
 
-File.open('names.txt', 'a') do |file|
-  file.write "\nDanny"
-end
+data = YAML::load(file)
+
+#file.each do |line|
+ # puts line
+#end
+
+#File.open('names.txt', 'a') do |file|
+ # file.write "\nDanny"
+#end
+binding.pry
