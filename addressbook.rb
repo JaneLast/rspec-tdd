@@ -1,4 +1,5 @@
-require "application.rb"
+
+
 # AddressBook class that reads in yml file or user input and stores it
 class AddressBook
   
@@ -54,6 +55,11 @@ class AddressBook
     return @data
   end
   
-  def search 
+  def search(name)
+    @book.each_with_index do |p,i|
+      if (p.first_name).downcase.include?(name.to_s.downcase)
+        puts p
+      end
+    end
   end
 end
