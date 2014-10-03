@@ -48,15 +48,6 @@ describe "The Person Class" do
      expect(person.to_s).to eq("Joe Bloggs was born on 1990-01-01. \n Their email addresses are: [\"joe@foo.com\"]. \n Their phone numbers are [\"07712345678\"]")
   end
 
-  #it "should output a pretty display" do
-   #  person = Person.new("joe", "bloggs", "1 Jan 1990")
-    # person.add_email "joe@foo.com"
-     #person.add_email "joe.bloggs@work.com"
-     #person.add_phone "07712345678"
-     
-     #expect(person.print_details).to eq()
- # end
-  
   it "make addressbook and someone" do
     person= Person.new("joe", "blogs", "1 Jan 1990")
     book = AddressBook.new
