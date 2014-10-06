@@ -1,5 +1,4 @@
-
-
+require "./application.rb"
 # AddressBook class that reads in yml file or user input and stores it
 class AddressBook
   

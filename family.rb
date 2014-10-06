@@ -1,4 +1,4 @@
-require "application.rb"
+require "./application.rb"
 
 class FamilyMember < Person
   def initialize(relationship)

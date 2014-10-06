@@ -2,6 +2,7 @@
 require 'date'
 require 'yaml'
 require './addressbook.rb'
+require 'pry'
 # Person class it requires user to input first name, surname and dob
 class Person
   
@@ -38,5 +39,6 @@ class Person
 # changes to_s to show a message rather than convert to string  
   def to_s
     "#{fullname} was born on #{dob}. \n Their email addresses are: #{email}. \n Their phone numbers are #{phone_numbers}"
-  end   
+  end  
+  binding.pry 
 end 
